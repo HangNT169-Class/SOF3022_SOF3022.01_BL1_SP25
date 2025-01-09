@@ -31,6 +31,7 @@ public class LoginController {
             LoginRequest request,
             Model model
     ) {
+        // validate ?
         model.addAttribute("res", request);
         return "buoi2/view-ket-qua";
     }
