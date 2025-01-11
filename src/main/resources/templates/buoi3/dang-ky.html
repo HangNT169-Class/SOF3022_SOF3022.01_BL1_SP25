@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/output-form" method="post" th:object="${request1}">
+    <h1>Form Dang Ky</h1>
+    <span>MSSV:</span>
+   <!--    <input type="text" th:field="${request1.maSV}"/>-->
+    <input type="text" th:field="*{maSV}"/>
+    <span th:errors="${request1.maSV}"></span>
+    <br/>
+    <span>Ten:</span>
+    <input type="text" th:field="${request1.tenSV}"/>
+    <span th:errors="*{tenSV}"></span>
+    <br/>
+    <span>Tuoi:</span>
+    <input type="text" th:field="*{tuoiSV}"/>
+    <span th:errors="${request1.tuoiSV}"></span>
+    <br/>
+    <span>Gioi tinh:</span>
+    <input type="radio" th:field="*{gioiTinh}" checked value="true"/> Nam
+    <input type="radio" th:field="*{gioiTinh}" value="false"/> Nữ <br/>
+    <button>Dang Ky</button>
+</form>
+</body>
+</html>
