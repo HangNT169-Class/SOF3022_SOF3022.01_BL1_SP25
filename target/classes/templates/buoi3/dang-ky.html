@@ -10,12 +10,15 @@
     <span>MSSV:</span>
    <!--    <input type="text" th:field="${request1.maSV}"/>-->
     <input type="text" th:field="*{maSV}"/>
+    <span th:errors="${request1.maSV}"></span>
     <br/>
     <span>Ten:</span>
     <input type="text" th:field="${request1.tenSV}"/>
+    <span th:errors="*{tenSV}"></span>
     <br/>
     <span>Tuoi:</span>
     <input type="text" th:field="*{tuoiSV}"/>
+    <span th:errors="${request1.tuoiSV}"></span>
     <br/>
     <span>Gioi tinh:</span>
     <input type="radio" th:field="*{gioiTinh}" checked value="true"/> Nam
