@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>STT</th>
+        <th>Category Code</th>
+        <th>Category Name</th>
+        <th>Hanh dong</th>
+    </tr>
+    <tbody>
+        <tr th:each="cg,index : ${list}">
+            <td th:text="${index.count}"></td>
+            <td th:text="${cg.categoryCode}"></td>
+            <td th:text="${cg.categoryName}"></td>
+            <td><a th:href="@{cate/detail/{a}(a=${cg.id})}">Detail</a></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
